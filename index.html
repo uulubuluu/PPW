@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Projects Webpage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Personal Projects Webpage</h1>
+      </header>
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+      </label>
+      <nav class="navbar">
+        <ul class="navstyle">
+          <li class="list"><a class="slide" href="index.html">Home</a></li>
+          <li class="list">
+            <a class="slide" href="/numberTricks/numberTricks.html"
+              >Project 1</a
+            >
+          </li>
+          <li class="list">
+            <a class="slide" href="index.html"> Project 2</a>
+          </li>
+          <li class="list">
+            <a class="slide" href="index.html"> Project 3</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <p id="para1">
+          Hi my name is <span>Nathan</span>, an aspiring Web Developer.
+        </p>
+      </main>
+      <footer>
+        <p id="para2">Contact Us</p>
+        <form action="mailto:npham@dccc.edu" method="post" enctype="text/plain">
+          <label for="myName">Full Name:</label>
+          <input
+            type="text"
+            id="myName"
+            name="myName"
+            placeholder="Input your name..."
+            required
+          />
+          <label for="myEmail">Email:</label>
+          <input
+            type="email"
+            id="myEmail"
+            name="myEmail"
+            placeholder="ndpham@dccc.com"
+            required
+          />
+          <label for="myComments">Comments:</label>
+          <textarea
+            id="myComments"
+            name="myComments"
+            placeholder="Input your comments..."
+            rows="3"
+            required
+          ></textarea>
+          <div><input type="submit" value="Submit" id="submitbtn" /></div>
+        </form>
+        <ul class="socialMedia">
+          <li><a href="#" class="fab fa-facebook-square"></a></li>
+          <li><a href="#" class="fab fa-twitter-square"></a></li>
+          <li><a href="#" class="fab fa-instagram-square"></a></li>
+        </ul>
+        <div id="copyrights">
+          <small
+            >&copy; 2020 Personal Projects Webpage<br />
+            <a href="mailto:npham@dccc.edu">ndpham@dccc.com</a></small
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

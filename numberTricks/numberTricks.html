@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Tricks</title>
+    <script>
+      // Nathan D Pham 09/16/2020
+      var userInput, userNum, alertString, result; //Set Global varibles
+      do {
+        userInput = prompt("Please Input Whole Number"); // Assign userInput to prompt a message and ask user to input a number
+        userNum = parseInt(userInput); // Assign userNum to parses a string arguement, userInput, into an integer number. User has to input a number in order for the trick to work
+        if (isNaN(userNum)) {
+          alert("Must be a Whole Number");
+        }
+      } while (isNaN(userNum));
+
+      alertString = "The Magic Number is "; // Assign alertString to a string message
+      result = ((userNum + 9) * 2 - 4) / 2 - userNum; //Assign result to the math trick
+      alert(alertString + result); //This will alert the string message and the result of the math trick
+    </script>
+  </head>
+  <body>
+    <script>
+      // Using document.write method to write out the steps of the math calculation
+      document.write(
+        "<li> I added 9 to " +
+          userNum +
+          ". The new number is " +
+          (userNum + 9) +
+          ". </li>"
+      );
+      document.write(
+        "<li> I multiplied " +
+          (userNum + 9) +
+          " by 2. The new number is " +
+          (userNum + 9) * 2 +
+          ". </li>"
+      );
+      document.write(
+        "<li> I subtracted 4 from " +
+          (userNum + 9) * 2 +
+          ". The new number is " +
+          ((userNum + 9) * 2 - 4) +
+          ". </li>"
+      );
+      document.write(
+        "<li> I divided " +
+          ((userNum + 9) * 2 - 4) +
+          " by 2. The new number is " +
+          ((userNum + 9) * 2 - 4) / 2 +
+          ". </li>"
+      );
+      document.write(
+        "<li> I subtracted your original number of " +
+          userNum +
+          " from " +
+          ((userNum + 9) * 2 - 4) / 2 +
+          ". </li>"
+      );
+      document.write("<h2> Your Magic Number Is " + result + ". </h2>");
+      document.write("<h3> Thanks for playing. </h3>");
+
+      // Create a function named refreshPg using location.reload method to reload the page when the function gets call by using a button
+      function refreshPg() {
+        location.reload(true);
+      }
+    </script>
+    <!-- When this button is clicked, it will recall the function refreshPg in order to reload the page. -->
+    <button onclick="refreshPg()">Play again?</button>
+  </body>
+</html>
