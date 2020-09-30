@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      #wrapper {
+        font-family: Apple Chancery, cursive;
+        background-color: bisque;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+        text-align: center;
+      }
+      #button1 {
+        margin-top: 1em;
+      }
+      #button2 {
+        visibility: hidden;
+      }
+      #button3 {
+        visibility: hidden;
+      }
+      span {
+        font-size: large;
+        font-weight: bold;
+      }
+      img {
+        margin-top: -2em;
+        margin-bottom: -1.5em;
+      }
+      #homePage {
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Mad Libs</h1>
+      <img
+        src="https://cdn.pixabay.com/photo/2014/10/09/23/32/maple-leaves-482678_1280.png"
+        width="15%"
+        height="auto"
+      />
+      <p>Please enter information about <span>Fall</span> season:</p>
+
+      <input
+        id="noun1"
+        placeholder="a noun"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+      <input
+        id="adjective1"
+        placeholder="an adjective"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+      <input
+        id="month1"
+        placeholder="a month"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+      <input
+        id="noun2"
+        placeholder="another noun"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+      <input
+        id="verb1"
+        placeholder="a verb"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+      <input
+        id="noun3"
+        placeholder="and another noun"
+        onkeyup="this.value = this.value.toUpperCase();"
+      /><br />
+
+      <button id="button1" onclick="displayStory()">Submit</button>
+
+      <p id="para1"></p>
+      <p id="para2"></p>
+      <p id="para3"></p>
+      <p id="para4"></p>
+      <p id="para5"></p>
+
+      <script>
+        function displayStory() {
+          var no1 = document.getElementById("noun1").value;
+          document.getElementById("para1").innerHTML =
+            "Fall, we somtime refer to this time of year as " + no1 + ".";
+
+          var adj1 = document.getElementById("adjective1").value;
+          document.getElementById("para2").innerHTML =
+            "Fall is one of the " + adj1 + " seasons of the year.";
+
+          var mon1 = document.getElementById("month1").value;
+          document.getElementById("para3").innerHTML =
+            "Fall usually begins in " + mon1 + ".";
+
+          var no2 = document.getElementById("noun2").value;
+          var verb1 = document.getElementById("verb1").value;
+          document.getElementById("para4").innerHTML =
+            "One popular holiday in the Fall is " +
+            no2 +
+            ", where people " +
+            verb1 +
+            " up in ghost costumes.";
+
+          var no3 = document.getElementById("noun3").value;
+          document.getElementById("para5").innerHTML =
+            "Another very popular holiday is " +
+            no3 +
+            ", a day to give thanks.";
+
+          document.getElementById("button2").style.visibility = "visible";
+          document.getElementById("button3").style.visibility = "visible";
+          //   document.getElementById("button1").style.visibility = "hidden";
+        }
+
+        function noDisplay() {
+          location.reload();
+        }
+      </script>
+
+      <button id="button2" onclick="noDisplay()">Go Again</button>
+      <button id="button3">
+        <a id="homePage" href="../index.html">Home Page</a>
+      </button>
+    </div>
+  </body>
+</html>

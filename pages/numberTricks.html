@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Tricks</title>
+    <style>
+      #homebtn {
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+      }
+    </style>
     <script>
       // Nathan D Pham 09/16/2020
       var userInput, userNum, alertString, result; //Set Global varibles
@@ -68,6 +76,6 @@
     </script>
     <!-- When this button is clicked, it will recall the function refreshPg in order to reload the page. -->
     <button onclick="refreshPg()">Play again?</button>
-    <a href="../index.html">Home Page</a>
+    <button><a id="homebtn" href="../index.html">Home Page</a></button>
   </body>
 </html>
